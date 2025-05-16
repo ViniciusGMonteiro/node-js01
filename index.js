@@ -2,18 +2,22 @@ const express = require('express');
 
 const app = express();
 
-
-app.get('/home', (req, res) => {
-    res.send('alguma coisa do home')
-})
+app.get("/", (req, res) => {
+    res.send('Olá, mundo');
+});
 
 app.get('/features', (req, res) => {
     res.send('alguma coisa do features')
 })
 
-app.get('/contact', (req, res) => {
+app.get('/about', (req, res) => {
+    res.send('about')
+})
+
+app.get('/contac', (req, res) => {
     res.send('alguma coisa do contact')
 })
 
-app.get('/about', (req, res) => {
-    res.send('alguma coisa do about');
+app.listen(300, () =>(
+    console.log("server is running on http:localhost")
+})
